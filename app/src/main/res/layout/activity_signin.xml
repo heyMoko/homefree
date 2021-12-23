@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/signin1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="회원가입"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signin1_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:text="Welcome!"
+        android:textColor="#63c1fe"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin1_title" />
+
+    <TextView
+        android:id="@+id/signin1_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="홈프리에 오신 것을\n환영합니다."
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin1_welcome" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/expert_button"
+        android:layout_width="120dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginRight="25dp"
+        android:drawableTop="@drawable/master"
+        android:padding="36dp"
+        android:text="전문가"
+        android:textSize="17sp"
+        android:background="@drawable/master_user_button_design"
+        app:layout_constraintEnd_toStartOf="@+id/user_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin1_text1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/user_button"
+        android:layout_width="120dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="25dp"
+        android:drawableTop="@drawable/user"
+        android:padding="36dp"
+        android:text="사용자"
+        android:textSize="17sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@drawable/master_user_button_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/expert_button"
+        app:layout_constraintTop_toBottomOf="@id/signin1_text1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

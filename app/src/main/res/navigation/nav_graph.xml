@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.project.yk_homefree.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="fragment_home" />
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.project.yk_homefree.fragments.MyPageFragment"
+        tools:layout="@layout/fragment_mypage"
+        android:label="fragment_mypage" />
+    <fragment
+        android:id="@+id/reserveListFragment"
+        android:name="com.project.yk_homefree.fragments.ReserveListFragment"
+        tools:layout="@layout/fragment_reservelist"
+        android:label="fragment_reservelist" />
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319696217573",
+    "project_id": "homefree-aos",
+    "storage_bucket": "homefree-aos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319696217573:android:5fd64a7e0e8b30b3e6bb0c",
+        "android_client_info": {
+          "package_name": "com.project.yk_homefree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319696217573-k1bpns2ppcv8gn5kfrnose9islhdpo5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB66rKqa_5ORT8qmK2DVrcE2q6WXo7LiqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319696217573-k1bpns2ppcv8gn5kfrnose9islhdpo5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

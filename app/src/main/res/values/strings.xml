@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">YK-homefree</string>
+    <string name="app_main">홈 프리</string>
+    <string name="idhint">아이디를 입력해 주세요.</string>
+    <string name="passwordhint">패스워드를 입력해주세요.</string>
+    <string name="autologin">자동 로그인</string>
+    <string name="saveid">아이디 저장</string>
+    <string name="login">로그인</string>
+    <string name="findpassword">패스워드 찾기 →</string>
+    <string name="signin">회원가입하기</string>
+    <string name="mainhome_text">안전한 청소업체\n홈프리를 만나보세요.</string>
+    <string name="mainhome_subtext">무료 견적 받고, 간편한 클릭으로 직접 예약!\n마음에 들면 예약까지 한번에!</string>
+    <string name="next">다음</string>
+</resources>
