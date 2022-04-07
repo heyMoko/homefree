@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reservation.reserve_once.OnceInfo2">
+
+    <TextView
+        android:id="@+id/reserve_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="예약 하기"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="유의사항"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve_tv" />
+
+    <TextView
+        android:id="@+id/check_in_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="입실시 주의사항"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/notice_tv"
+        app:layout_constraintTop_toBottomOf="@id/notice_tv" />
+
+    <EditText
+        android:id="@+id/check_in_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:hint="예) 책상 위 서류들은 그대로 놓아주세요."
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/check_in_tv"
+        app:layout_constraintTop_toBottomOf="@id/check_in_tv" />
+
+    <View
+        android:id="@+id/cross1"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cross_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_in_edit" />
+
+    <TextView
+        android:id="@+id/clean_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="청소시 주의사항"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/notice_tv"
+        app:layout_constraintTop_toBottomOf="@id/cross1" />
+
+    <EditText
+        android:id="@+id/clean_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:hint="예) 화장실과 주방 청소 신경 써주세요."
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/check_in_tv"
+        app:layout_constraintTop_toBottomOf="@id/clean_tv" />
+
+    <View
+        android:id="@+id/cross2"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cross_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clean_edit" />
+
+    <TextView
+        android:id="@+id/after_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="청소 후 주의사항"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/notice_tv"
+        app:layout_constraintTop_toBottomOf="@id/cross2" />
+
+    <EditText
+        android:id="@+id/after_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:hint="예) 일반 쓰레기는 종량제 봉투에 담아 1층에 버려주세요"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/check_in_tv"
+        app:layout_constraintTop_toBottomOf="@id/after_tv" />
+
+    <TextView
+        android:id="@+id/add_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="※ 무리한 요청은 매칭이 지연될 수 있습니다."
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@id/notice_tv"
+        app:layout_constraintTop_toBottomOf="@id/after_edit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/loginbutton_design"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

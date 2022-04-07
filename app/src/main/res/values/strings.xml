@@ -11,4 +11,12 @@
     <string name="mainhome_text">안전한 청소업체\n홈프리를 만나보세요.</string>
     <string name="mainhome_subtext">무료 견적 받고, 간편한 클릭으로 직접 예약!\n마음에 들면 예약까지 한번에!</string>
     <string name="next">다음</string>
+    <string name="date_time">예약 날짜 및 시간</string>
+    <string name="address">주소</string>
+    <string name="choice_date">날짜 선택</string>
+    <string name="choice_time">시간 선택</string>
+    <string name="eight_ten">08:00 - 11:00</string>
+    <string name="nine_twelve">09:00 - 12:00</string>
+    <string name="reserve">예약 하기</string>
+
 </resources>

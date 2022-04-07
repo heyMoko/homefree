@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reservation.ReserveChoice">
+
+    <TextView
+        android:id="@+id/reserve_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/reserve"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve_tv" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/address_search_view"
+        android:layout_width="364dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/master_user_button_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reserve_tv">
+
+        <TextView
+            android:id="@+id/place_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:text="장소 선택"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/place_choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="지번, 도로명, 건물명으로 검색해 주세요."
+            app:layout_constraintStart_toStartOf="@id/place_choice"
+            app:layout_constraintTop_toBottomOf="@id/place_choice" />
+
+        <ImageView
+            android:id="@+id/place_choice_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/ic_baseline_cleaning_services_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/address_search_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/master_user_button_design"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:hint="주소를 검색해주세요"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="@id/place_choice_img"
+            app:layout_constraintStart_toStartOf="@id/place_choice2"
+            app:layout_constraintTop_toBottomOf="@id/place_choice2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/once_click"
+        android:layout_width="160dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/master_user_button_design"
+        android:drawableTop="@drawable/once_click"
+        android:padding="36dp"
+        android:text="1회예약"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@id/regularly_click"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/address_search_view"
+        app:layout_constraintTop_toBottomOf="@id/address_search_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/regularly_click"
+        android:layout_width="160dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/master_user_button_design"
+        android:drawableTop="@drawable/regularly_click"
+        android:padding="36dp"
+        android:text="정기예약"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/address_search_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/once_click"
+        app:layout_constraintTop_toBottomOf="@id/address_search_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

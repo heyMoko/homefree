@@ -3,9 +3,9 @@ package com.project.yk_homefree.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.project.yk_homefree.R
 import com.project.yk_homefree.databinding.ActivitySigninBinding
 import com.project.yk_homefree.signin_expert.SigninExpertActivity1
+import com.project.yk_homefree.signin_user.SigninUserActivity1
 
 class SigninActivity : AppCompatActivity() {
 
@@ -19,6 +19,10 @@ class SigninActivity : AppCompatActivity() {
 
         binding?.expertButton?.setOnClickListener {
             val intent = Intent(this, SigninExpertActivity1::class.java)
+            startActivity(intent)
+        }
+        binding?.userButton?.setOnClickListener {
+            val intent = Intent(this, SigninUserActivity1::class.java)
             startActivity(intent)
         }
     }

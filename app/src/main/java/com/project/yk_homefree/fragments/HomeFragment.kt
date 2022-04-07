@@ -1,5 +1,6 @@
 package com.project.yk_homefree.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -16,6 +17,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.project.yk_homefree.R
 import com.project.yk_homefree.databinding.FragmentHomeBinding
+import com.project.yk_homefree.login.SigninActivity
+import com.project.yk_homefree.reservation.ReserveChoice
 
 class HomeFragment: Fragment() {
 
@@ -40,6 +43,11 @@ class HomeFragment: Fragment() {
         spannableString.setSpan(boldspan, 4, 12, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         binding.mainhomeTextView.text = spannableString
+
+        binding.reserveButton.setOnClickListener {
+            val intent = Intent(activity, ReserveChoice::class.java)
+            startActivity(intent)
+        }
 
         return mBinding?.root
 

@@ -1,4 +1,4 @@
-package com.project.yk_homefree.signin_expert
+package com.project.yk_homefree.signin_user
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,19 +9,19 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.project.yk_homefree.R
-import com.project.yk_homefree.databinding.ActivitySigninExpert2Binding
+import com.project.yk_homefree.databinding.ActivitySigninUser2Binding
 import com.project.yk_homefree.login.LoginActivity
 
-class SigninExpertActivity2 : AppCompatActivity() {
+class SigninUserActivity2 : AppCompatActivity() {
 
-    private var mbinding: ActivitySigninExpert2Binding? = null
+    private var mbinding: ActivitySigninUser2Binding? = null
     private val binding get() = mbinding!!
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mbinding = ActivitySigninExpert2Binding.inflate(layoutInflater)
+        mbinding = ActivitySigninUser2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         auth = Firebase.auth
@@ -33,7 +33,7 @@ class SigninExpertActivity2 : AppCompatActivity() {
 
     private fun signin() {
 
-        binding.signinExpert2SigninBtn.setOnClickListener {
+        binding.signinUser2SigninBtn.setOnClickListener {
 
             val email = binding.idEdittext.text.toString()
             val password = binding.pwEdittext.text.toString()
@@ -42,7 +42,7 @@ class SigninExpertActivity2 : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, SigninExpertActivity3::class.java)
+                        val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, "회원가입에 실패했습니다. 입력하신 정보를 다시 확인해주세요", Toast.LENGTH_SHORT)
@@ -67,49 +67,49 @@ class SigninExpertActivity2 : AppCompatActivity() {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
         passwordEditText.addTextChangedListener {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
         checkEditText.addTextChangedListener {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
         nameEditText.addTextChangedListener {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
         phoneEditText.addTextChangedListener {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
         authEditText.addTextChangedListener {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
         birthEditText.addTextChangedListener {
             val enable =
                 emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty() && checkEditText.text.isNotEmpty() && nameEditText.text.isNotEmpty()
                         && phoneEditText.text.isNotEmpty() && authEditText.text.isNotEmpty() && birthEditText.text.isNotEmpty()
-            binding.signinExpert2SigninBtn.isEnabled = enable
+            binding.signinUser2SigninBtn.isEnabled = enable
         }
 
 

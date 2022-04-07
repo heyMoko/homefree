@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/regularly_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/reserve_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="예약 하기"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/info_select_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="상세 정보 및 추가 선택"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reserve_tv" />
+
+        <TextView
+            android:id="@+id/pet_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:text="[필수] 혹시 반려동물이 있으신가요?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/info_select_tv"
+            app:layout_constraintTop_toBottomOf="@id/info_select_tv" />
+
+        <RadioGroup
+            android:id="@+id/pet_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pet_tv">
+
+            <RadioButton
+                android:id="@+id/pet_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:layoutDirection="rtl"
+                android:text="네, 있어요"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/pet_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="     아니요, 없어요"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/pet_yes_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/petyes"
+            app:layout_constraintBottom_toTopOf="@id/pet_no_img"
+            app:layout_constraintEnd_toStartOf="@id/pet_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pet_group" />
+
+        <ImageView
+            android:id="@+id/pet_no_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/petno"
+            app:layout_constraintBottom_toBottomOf="@id/pet_group"
+            app:layout_constraintEnd_toStartOf="@id/pet_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pet_yes_img" />
+
+        <View
+            android:id="@+id/cross1"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cross_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pet_group" />
+
+        <TextView
+            android:id="@+id/additional_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="[선택] 추가 선택을 해주세요."
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/info_select_tv"
+            app:layout_constraintTop_toBottomOf="@id/cross1" />
+
+        <RadioGroup
+            android:id="@+id/additional_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/additional_tv">
+
+            <RadioButton
+                android:id="@+id/laundry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:layoutDirection="rtl"
+                android:text="세탁"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/dust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="     실내 창틀 먼지"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/refrigerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="     냉장고 청소"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/terrace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="      베란다 바닥"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/laundry_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/laundry"
+            app:layout_constraintBottom_toTopOf="@id/dust_img"
+            app:layout_constraintEnd_toStartOf="@id/additional_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/additional_select" />
+
+        <ImageView
+            android:id="@+id/dust_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/dust"
+            app:layout_constraintBottom_toTopOf="@id/fridger_img"
+            app:layout_constraintEnd_toStartOf="@id/additional_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/laundry_img" />
+
+        <ImageView
+            android:id="@+id/fridger_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/fridge"
+            app:layout_constraintBottom_toTopOf="@id/terrace_img"
+            app:layout_constraintEnd_toStartOf="@id/additional_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dust_img" />
+
+        <ImageView
+            android:id="@+id/terrace_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/balcony"
+            app:layout_constraintBottom_toBottomOf="@id/additional_select"
+            app:layout_constraintEnd_toStartOf="@id/additional_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fridger_img" />
+
+        <View
+            android:id="@+id/cross2"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cross_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/additional_select" />
+
+        <TextView
+            android:id="@+id/trash_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="[선택] 쓰레기 배출 선택을 해주세요."
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/info_select_tv"
+            app:layout_constraintTop_toBottomOf="@id/cross2" />
+
+        <RadioGroup
+            android:id="@+id/trash_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trash_tv">
+
+            <RadioButton
+                android:id="@+id/normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:layoutDirection="rtl"
+                android:text="일반 쓰레기"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="     재활용 쓰레기"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layoutDirection="rtl"
+                android:text="     음식물 쓰레기"
+                android:textAlignment="textStart"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/normal_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/normal"
+            app:layout_constraintBottom_toTopOf="@id/recycle_img"
+            app:layout_constraintEnd_toStartOf="@id/trash_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/trash_select" />
+
+        <ImageView
+            android:id="@+id/recycle_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/recycle"
+            app:layout_constraintBottom_toTopOf="@id/food_img"
+            app:layout_constraintEnd_toStartOf="@id/trash_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/normal_img" />
+
+        <ImageView
+            android:id="@+id/food_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/food"
+            app:layout_constraintBottom_toBottomOf="@id/trash_select"
+            app:layout_constraintEnd_toStartOf="@id/trash_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycle_img" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/loginbutton_design"
+            android:text="다음"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trash_select" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

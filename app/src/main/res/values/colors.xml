@@ -10,5 +10,10 @@
     <color name="gray">#F1E7E7</color>
     <color name="dark_gray">#877373</color>
     <color name="sky">#5BB0D6</color>
+    <color name="red">#F30417</color>
+    <color name="gray_ec">#ECECEC</color>
     <color name="background">#FFFFFF</color>
+    <color name="cross_line">#F3E5E5</color>
+    <color name="gray_cc">#CCCCCC</color>
+
 </resources>

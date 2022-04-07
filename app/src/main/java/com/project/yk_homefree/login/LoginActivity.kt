@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
         val passwordEditText = binding.passwordEditText
 
         emailEditText.addTextChangedListener {
-            val enable = emailEditText.text.isNotEmpty()  && passwordEditText.text.isNotEmpty()
+            val enable = emailEditText.text.isNotEmpty() && passwordEditText.text.isNotEmpty()
             binding.loginButton.isEnabled = enable
         }
 

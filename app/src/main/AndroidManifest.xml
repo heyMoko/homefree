@@ -13,6 +13,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YKhomefree">
         <activity
+            android:name=".signin_user.SigninUserActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".signin_user.SigninUserActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.reserve_once.OnceInfo2"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.reserve_regularly.RegularlyInfo"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.reserve_once.OnceInfo"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.reserve_regularly.ReserveRegularly"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.reserve_once.ReserveOnce"
+            android:exported="false" />
+        <activity
+            android:name=".reservation.ReserveChoice"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -24,7 +48,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".login.SigninActivity"
             android:exported="false" />

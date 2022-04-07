@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/regularly_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/reserve_regularly_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="예약 하기"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/service_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="서비스 주기 선택"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/choice_date_tv"
+            app:layout_constraintTop_toBottomOf="@id/reserve_regularly_tv" />
+
+        <RadioGroup
+            android:id="@+id/week_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/service_week">
+
+            <RadioButton
+                android:id="@+id/one_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="45dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="1주 마다"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/two_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="45dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="2주 마다"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="4주 마다"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/choice_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="날짜 선택"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/regularly_calendar"
+            app:layout_constraintTop_toBottomOf="@id/week_radio_group" />
+
+        <CalendarView
+            android:id="@+id/regularly_calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choice_date_tv" />
+
+        <TextView
+            android:id="@+id/choice_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="시간 선택"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/choice_date_tv"
+            app:layout_constraintTop_toBottomOf="@id/regularly_calendar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/master_user_button_design"
+            android:text="08:00 - 11:00"
+            app:layout_constraintEnd_toStartOf="@id/time_btn2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choice_time_tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/master_user_button_design"
+            android:text="09:00 - 12:00"
+            app:layout_constraintEnd_toStartOf="@id/time_btn3"
+            app:layout_constraintStart_toEndOf="@id/time_btn1"
+            app:layout_constraintTop_toBottomOf="@id/choice_time_tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time_btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/master_user_button_design"
+            android:text="10:00 - 13:00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/time_btn2"
+            app:layout_constraintTop_toBottomOf="@id/choice_time_tv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time_btn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/master_user_button_design"
+            android:text="11:00 - 14:00"
+            app:layout_constraintEnd_toStartOf="@id/time_btn5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time_btn5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/master_user_button_design"
+            android:text="12:00 - 15:00"
+            app:layout_constraintEnd_toStartOf="@id/time_btn6"
+            app:layout_constraintStart_toEndOf="@id/time_btn4"
+            app:layout_constraintTop_toBottomOf="@id/time_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time_btn6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/master_user_button_design"
+            android:text="13:00 - 16:00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/time_btn5"
+            app:layout_constraintTop_toBottomOf="@id/time_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/loginbutton_design"
+            android:enabled="false"
+            android:text="다음"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_btn6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

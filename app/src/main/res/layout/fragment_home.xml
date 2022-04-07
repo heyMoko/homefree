@@ -39,17 +39,18 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/reserve_button"
         android:layout_width="0dp"
-        android:text="예약하기"
-        android:drawableLeft="@drawable/ic_reserve"
-        android:textStyle="bold"
-        android:textSize="17sp"
-        android:paddingLeft="117dp"
-        android:drawablePadding="-120dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/reservebutton_design"
+        android:drawableLeft="@drawable/ic_reserve"
+        android:drawablePadding="-120dp"
+        android:paddingLeft="117dp"
+        android:text="예약하기"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/mainhome_TextView"
         app:layout_constraintEnd_toEndOf="@id/mainhome_TextView"
-        app:layout_constraintTop_toBottomOf="@id/mainhome_subTextView"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/mainhome_TextView"
+        app:layout_constraintTop_toBottomOf="@id/mainhome_subTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import com.project.yk_homefree.R
 import com.project.yk_homefree.databinding.ActivitySigninExpert3Binding
+import com.project.yk_homefree.login.LoginActivity
 
 class SigninExpertActivity3 : AppCompatActivity() {
 
@@ -33,7 +34,11 @@ class SigninExpertActivity3 : AppCompatActivity() {
         binding.signinExpert3Tv.text = spannableString
         binding.photoImageView.setOnClickListener {
             pickImageGallery()
+        }
 
+        binding.signinExpert3NextBtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 
