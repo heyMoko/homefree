@@ -1,5 +1,5 @@
 # HomeFree_Android 
-* 기획부재로 일시중단
+* 4/2 인수인계로 작업 중단
 
 ## 개발환경
 * OS : windows 10 pro
